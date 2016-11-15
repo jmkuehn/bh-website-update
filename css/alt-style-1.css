@@ -1,0 +1,149 @@
+/*******NavBar*******/
+nav {
+}
+nav ul {}
+
+nav li {color: #bb0000;}
+
+nav li:hover{
+
+}
+
+nav a {}
+nav a:hover{
+
+}
+nav li.active{
+
+}
+
+nav li.active a{
+
+}
+
+/********Core******/
+body {background: white;}
+
+.content {
+
+}
+
+h1 {
+
+}
+
+.block {filter: none;}
+.row{
+
+}
+
+.block.half{
+
+}
+.block.third{
+
+}
+
+/*****Buttony things**********/
+a {
+
+}
+
+a:hover {
+
+}
+
+.button {
+
+}
+
+.button:hover {
+}
+
+#social-media-icons{
+
+}
+
+/********Home******/
+#logo{
+
+}
+
+#title {
+
+}
+
+#meeting-info{
+
+}
+
+#mailing-list{
+
+}
+
+/********About******/
+
+.icon {
+
+}
+
+.content-header {
+
+}
+
+.right {
+}
+
+.left {
+}
+
+/***Events Stuff***/
+.event {
+
+}
+
+.events_container {
+}
+
+.events_header {
+
+}
+
+.event .name {
+
+}
+
+.event .date {
+
+}
+
+/***Friends Stuff***/
+.friends_container {
+}
+
+.friend {
+
+}
+
+.friend .logo {
+
+}
+
+.friend .info {
+}
+
+.friend .name {
+}
+
+.friend .desc {
+}
+
+.friend a:hover {
+    
+}
+
+/******** Contact ******/
+.officer.block{
+}
+.officer img{
+}

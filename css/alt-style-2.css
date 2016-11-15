@@ -1,0 +1,151 @@
+/*******NavBar*******/
+nav {background: white;filter: drop-shadow(0px 2px 2px);}
+nav ul {}
+
+nav li {color: #bb0000;}
+
+nav li:hover{
+
+}
+
+nav a {}
+nav a:hover{
+
+}
+nav li.active{
+
+}
+
+nav li.active a{
+
+}
+
+/********Core******/
+body {
+    background:#666;
+}
+
+.content {
+
+}
+
+h1 {
+
+}
+
+.block {
+    flex-direction: COLUMN;
+    margin: 2.5% 0;
+    border-radius: 0;
+    padding: 2% 10%;
+}
+.row{}
+
+.block.half{
+
+}
+.block.third{
+
+}
+
+/*****Buttony things**********/
+a {
+
+}
+
+a:hover {
+
+}
+
+.button {
+
+}
+
+.button:hover {
+}
+
+#social-media-icons{
+
+}
+
+/********Home******/
+#logo{
+
+}
+
+#title {
+
+}
+
+#meeting-info{
+
+}
+
+#mailing-list{
+
+}
+
+/********About******/
+
+.icon {display: none;}
+
+.content-header {
+
+}
+
+.right {padding-left: 5%;padding-right: 0;}
+
+.left {
+}
+
+/***Events Stuff***/
+.event {
+
+}
+
+.events_container {
+}
+
+.events_header {
+
+}
+
+.event .name {
+
+}
+
+.event .date {
+
+}
+
+/***Friends Stuff***/
+.friends_container {
+}
+
+.friend {
+    display:block;
+}
+
+.friend .logo {
+
+}
+
+.friend .info {}
+
+.friend .name {
+}
+
+.friend .desc {
+}
+.friend img{
+    display:none;
+}
+.friend a:hover {
+    
+}
+
+/******** Contact ******/
+.officer.block{
+}
+.officer img{
+}
