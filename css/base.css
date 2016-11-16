@@ -4,7 +4,7 @@ nav {
     display: flex;
     font-family: 'Cutive Mono', 'monospace';
     font-size:20pt;
-    position:absolute;
+    background:#666;
 }
 
 nav ul {
@@ -13,7 +13,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-direction:column
+    width: 100%;
 }
 
 nav li {
@@ -26,16 +26,15 @@ nav a {
     width: 20%;
     text-align: center;
     padding: 0 2.5%;
+    color: #fff;
 }
 
 nav a:hover {
-    color: inherit;
+	color:#fff;
 }
 
 nav li.active {
     cursor: default;
-    color: inherit;
-    padding-left: 1em;
 }
 
 /********Core******/
@@ -51,7 +50,7 @@ body {
     background: none;
     margin: 2% 10%;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     align-items: center;
 }
 
