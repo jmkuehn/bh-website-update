@@ -2,18 +2,22 @@
 /*******NavBar*******/
 nav {
     display: flex;
-    font-family: 'Cutive Mono', 'monospace';
-    font-size:20pt;
-    background:#666;
+    font-family: 'roboto', 'serif';
+    font-weight:700;
+    font-size:14pt;
+    text-transform:uppercase;
 }
 
 nav ul {
-    margin: .5em;
+    margin-top: 1em;
     padding: 0;
+    /* padding-bottom:.5em; */
     list-style: none;
     display: flex;
     justify-content: center;
     width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #bb0000;
 }
 
 nav li {
@@ -23,18 +27,19 @@ nav li:hover {
 }
 
 nav a {
-    width: 20%;
     text-align: center;
-    padding: 0 2.5%;
-    color: #fff;
+    width: 10%;
 }
 
-nav a:hover {
-	color:#fff;
+nav > ul > a.active{
+    border-bottom: 1px solid;
+    cursor:default;
+    box-sizing: border-box;
 }
 
-nav li.active {
-    cursor: default;
+nav > ul > a:hover {
+	border-bottom:1px solid;
+	color:#bb0000;
 }
 
 /********Core******/
@@ -44,11 +49,13 @@ body {
     font-weight: 400;
     padding: 0px;
     font-size: 16pt;
+    /* background-color: #666; */
+    /* color: #fff; */
 }
 
 .container {
     background: none;
-    margin: 2% 10%;
+    /* margin: 2% 10%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,6 +64,7 @@ body {
 .content {
     line-height: 1.5em;
     margin: auto;
+    text-align: justify;
 }
 
 h1 {
@@ -75,8 +83,12 @@ h1 {
 
 .row {
     display: flex;
-    margin: 2.5% 5%;
-    justify-content: space-between;
+    padding: 1.5em 30%;
+}
+
+.row:nth-child(even){
+    /* background-color:#bb0000; */
+    /* color:white; */
 }
 
 .block.ta-center {
@@ -87,18 +99,14 @@ h1 {
     box-sizing: border-box;
     display: inline-flex;
     margin: 0;
-    width: 48%;
+    width: 50%;
 }
 
 .block.third {
     box-sizing: border-box;
     margin: 0;
-    width: 32%;
+    width: 33%;
     display: inline-flex;
-}
-
-.fill {
-    margin: auto;
 }
 
 .vertical {
@@ -159,7 +167,7 @@ a:hover {
 
 /********About******/
 .content-header {
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: .5em;
     font-size: 25pt;
     font-family: 'Roboto slab', 'serif';
@@ -183,14 +191,14 @@ a:hover {
     font-weight: 300;
 }
 
-.event .name {
+.event > .name {
     font-size: 24pt;
     display: block;
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
 }
 
-.event .date {
+.event > .date {
     font-size: 16pt;
     font-weight: 300;
     margin: 0;
@@ -202,27 +210,29 @@ a:hover {
     padding: 0 20%;
 }
 
-.friend {display: block;}
+.logo-wrapper{
+	display:flex;
+	width: 20%;
+}
 
-.friend .logo {
-    width: 300px;
+.logo {
+    height:100px;
     margin: auto;
-    display: flex;
 }
 
-.friend .info {
+.friend > .info {
     margin: 1em;
+    width: 80%;
 }
 
-.friend .name {
+.friend > .info > .name {
     font-size: 20pt;
+    font-family: 'Roboto slab', 'serif';
+    font-weight: 700;
+    text-align:center;
 }
 
-.friend .desc {
-    margin: 0;
-}
-
-.friend a:hover {
+.friend > a:hover {
     opacity: .5;
 }
 
@@ -233,53 +243,7 @@ a:hover {
     height: 500px;
 }
 
-.officer img {
+.officer > img {
     margin: auto;
     border-radius: 10px;
-}
-/*** flipper ***/
-
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000px;
-}
-
-/* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-}
-
-.flip-container, .front, .back {
-	width: 400px;
-	height: 400px;
-}
-
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-	position: absolute;
-	display: flex;
-	align-items: center;
-	top: 0;
-	left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
 }
