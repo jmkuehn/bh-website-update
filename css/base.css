@@ -5,6 +5,7 @@ nav {
     font-size: 12pt;
     text-transform: uppercase;
     margin-bottom: 1em;
+    transition: 0.3s;
 }
 
 nav > ul {
@@ -15,12 +16,21 @@ nav > ul {
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
+    transition: 0.3s;
 }
 
 nav > ul > li {
-    display:block;
+    display: block;
     text-align: center;
-    margin:0 1em;
+    float: left;
+    transition: 0.3s;
+}
+
+nav > ul > li > a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    transition: 0.3s;
 }
 
 nav > ul > li > a.active {
@@ -34,11 +44,14 @@ nav > ul > li > a:hover {
     color: #bb0000;
 }
 
+nav > ul > li.icon {
+    display: none;
+}
+
 /********Core******/
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
-    width: 100%;
     font-weight: 400;
     padding: 0px;
     font-size: 14pt;
@@ -50,7 +63,7 @@ body {
 .container {
     background: none;
     max-width: 700px;
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,7 +92,7 @@ h1 {
 .row {
     display: flex;
     margin: 1.5em;
-    /* width: 600px; */
+    max-width: 600px;
 }
 
 .row:nth-child(even) {
@@ -266,6 +279,7 @@ a:hover {
 .officer.block {
     text-align: center;
     align-content: space-between;
+    margin: 1em;
 }
 
 .officer > img {
@@ -279,31 +293,63 @@ a:hover {
 /******** Tablet ********/
 @media screen and (max-width: 768px) {
 }
+
 /******** nav-width ********/
 @media screen and (max-width: 500px) {
-
-    nav{
+    nav {
         position:absolute;
-        width:100%;
+        width: 100%;
         z-index: 2;
-        box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
     }
+
     nav > ul {
-        display:block;
-        line-height:2em;
-        background-color:rgba(240,240,240,0.95);
+        display: block;
+        background-color: rgba(240,240,240,0.95);
         margin: 0;
     }
 
-    container {
-        padding-top: 20px;
+    nav > ul > li > a:hover {
+        border-bottom: none;
+    }
+
+    .container {
+        padding-top: 50px;
+    }
+
+    nav > ul > li:not(:first-child) {
+        display: none;
+    }
+
+    nav > ul > li.icon {
+        float: right;
+        display: inline-block;
+    }
+
+    nav > ul.responsive {
+        position: relative;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+    }
+
+    nav > ul.responsive > li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    nav > ul.responsive > li {
+        float: none;
+        display: inline;
+    }
+
+    nav > ul.responsive > li > a {
+        display: block;
+        text-align: left;
     }
 }
 
 /******** Mobile L ********/
 @media screen and (max-width: 425px) {
-    /********Home******/
-    #logo {
+    /********Home******/ #logo {
         width: 250px;
     }
 
@@ -322,12 +368,61 @@ a:hover {
     #social-media-icons {
         font-size: 21pt;
     }
+
+    /*********** about *****/
+    .content-header {
+        font-size: 16pt;
+    }
+
+    .content {
+        font-size: 12pt;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .block.third {
+        width: 100%;
+    }
+
+    .friend {
+        width: 100%;
+    }
+
+    .name-wrapper {
+        font-size: 14pt;
+    }
+
+    .info-wrapper {
+    }
+
+    .info-wrapper > p {
+        width: 80%;
+        font-size: 12pt;
+    }
+
+    .logo-wrapper {
+        display: none;
+    }
+
+    .logo > img {
+        display: none;
+    }
+
+    .friend > .info {
+        margin: 1em;
+        width: 80%;
+    }
+
+    .friend > .info > .name {
+        font-size: 14pt;
+    }
 }
 
 /******** Mobile M ********/
 @media screen and (max-width: 375px) {
-    /********Home******/
-    #logo {
+    /********Home******/ #logo {
         width: 200px;
     }
 
@@ -350,9 +445,4 @@ a:hover {
 
 /******** Mobile S ********/
 @media screen and (max-width: 320px) {
-
 }
-
-
-
-
